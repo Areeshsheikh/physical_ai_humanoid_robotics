@@ -1,0 +1,11 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background-color: #eef2f7;
+}
+
+html[data-theme='dark'] .features {
+  background-color: #0d1117;
+}

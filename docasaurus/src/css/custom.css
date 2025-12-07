@@ -1,0 +1,63 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #1a4a7a; /* Deep blue for robotics theme */
+  --ifm-color-primary-dark: #0c2e5c; /* Darker blue */
+  --ifm-color-primary-darker: #0a284e;
+  --ifm-color-primary-darkest: #08203e;
+  --ifm-color-primary-light: #2a68a8; /* Lighter blue */
+  --ifm-color-primary-lighter: #3a78b8;
+  --ifm-color-primary-lightest: #4f8bd1;
+  --ifm-color-secondary: #6c757d; /* Gray for secondary elements */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4f8bd1; /* Light blue for dark mode */
+  --ifm-color-primary-dark: #3a78b8;
+  --ifm-color-primary-darker: #2a68a8;
+  --ifm-color-primary-darkest: #1a4a7a;
+  --ifm-color-primary-light: #64a3dc;
+  --ifm-color-primary-lighter: #79b5e2;
+  --ifm-color-primary-lightest: #a4cde9;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #0c2e5c; /* Dark blue background */
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer__title {
+  color: #a4cde9; /* Light blue for section titles */
+}
+
+.footer__link {
+  color: #e6f0fa; /* Lighter text for links */
+}
+
+.footer__link:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+.footer__copyright {
+  color: #a4b5c5; /* Muted text for copyright */
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #2a4a7a; /* Subtle border */
+}
+
+html[data-theme='dark'] .footer {
+  background-color: #0d1117;
+  border-top: 1px solid #2a4a7a;
+}
