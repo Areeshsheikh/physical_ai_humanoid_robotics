@@ -1,10 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes: prismThemes} = require('prism-react-renderer');
-
-const lightCodeTheme = prismThemes.github;
-const darkCodeTheme = prismThemes.dracula;
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -13,14 +11,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://Areeshsheikh.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages, this is usually '/<username>.github.io/<repository-name>/'
-  baseUrl: '/Hackathone-1/',
+  baseUrl: '/physical_ai_humanoid_robotics/',
 
   // GitHub pages deployment config.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'Hackathone-1', // Usually your repo name.
+  organizationName: 'Areeshsheikh', // Usually your GitHub org/user name.
+  projectName: 'hysical_ai_humanoid_robotics', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -72,7 +70,7 @@ const config = {
             label: 'Book Content',
           },
           {
-            href: 'https://github.com/your-username/your-repo',
+            href: 'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics',
             label: 'GitHub',
             position: 'right',
           },
