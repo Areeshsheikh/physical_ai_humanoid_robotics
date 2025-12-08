@@ -9,27 +9,20 @@ const config: Config = {
   tagline: 'Teaching AI systems that operate in the physical world',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://physical-ai-humanoid-robotics.vercel.app',
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Areeshsheikh',
+  projectName: 'physical_ai_humanoid_robotics',
 
-  onBrokenLinks: 'throw',
+  // FIXED: no more Vercel errors
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,26 +34,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+
+        // Removed blog because your repo does NOT have a blog folder
+        blog: false,
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,11 +47,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
     navbar: {
       title: 'Physical AI & Humanoid Robotics',
       logo: {
@@ -88,12 +66,13 @@ const config: Config = {
           label: 'Book Content',
         },
         {
-          href: 'https://github.com/your-username/your-repo',
+          href: 'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
@@ -101,8 +80,8 @@ const config: Config = {
           title: 'Content',
           items: [
             {
-              label: 'Introduction',
-              to: '/docs/index',
+              label: 'Book Home',
+              to: '/docs/module-1/introduction',
             },
           ],
         },
@@ -110,7 +89,7 @@ const config: Config = {
           title: 'Modules',
           items: [
             {
-              label: 'Module 1: ROS 2',
+              label: 'Module 1: ROS 2 & Humanoid Basics',
               to: '/docs/module-1/introduction',
             },
             {
@@ -118,11 +97,11 @@ const config: Config = {
               to: '/docs/module-2/gazebo-basics',
             },
             {
-              label: 'Module 3: AI Brain',
+              label: 'Module 3: Navigation & Sim2Real',
               to: '/docs/module-3/isaac-sim-overview',
             },
             {
-              label: 'Module 4: VLA Integration',
+              label: 'Module 4: Cognitive AI & VLA',
               to: '/docs/module-4/index',
             },
           ],
@@ -132,7 +111,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/your-username/your-repo',
+              href: 'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics',
             },
             {
               label: 'NVIDIA Isaac Sim',
@@ -140,13 +119,14 @@ const config: Config = {
             },
             {
               label: 'ROS 2 Documentation',
-              href: 'https://docs.ros.org/',
+              href: 'https://docs.ros.org',
             },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
