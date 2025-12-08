@@ -1,123 +1,74 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// docusaurus.config.js
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes: prismThemes } = require('prism-react-renderer');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  title: 'AI/Spec-Driven Book on Physical AI & Humanoid Robotics',
-  tagline: 'Teaching AI systems that operate in the physical world',
-  favicon: 'img/favicon.ico',
+const lightCodeTheme = prismThemes.github;
+const darkCodeTheme = prismThemes.dracula;
 
-  // Set the production url of your site here
-  url: 'https://Areeshsheikh.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages, this is usually '/<username>.github.io/<repository-name>/'
-  baseUrl: '/physical_ai_humanoid_robotics/',
-
-  // GitHub pages deployment config.
-  organizationName: 'Areeshsheikh', // Usually your GitHub org/user name.
-  projectName: 'hysical_ai_humanoid_robotics', // Usually your repo name.
-
+module.exports = {
+  title: 'Physical AI Humanoid Robotics',
+  tagline: 'Learn Humanoid Robotics & Physical AI',
+  url: 'https://your-site.vercel.app', // Replace with your site URL
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
+  favicon: 'img/favicon.ico',
+  organizationName: 'Areeshsheikh', // GitHub username
+  projectName: 'physical_ai_humanoid_robotics', // Repository name
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics/edit/main/',
         },
-        blog: false, // Disable blog if not needed
+        blog: {
+          showReadingTime: true,
+          editUrl:
+            'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics/edit/main/blog/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'Physical AI & Humanoid Robotics',
-        logo: {
-          alt: 'Robotics Book Logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    navbar: {
+      title: 'Physical AI Robotics',
+      logo: {
+        alt: 'Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        { to: '/docs/intro', label: 'Docs', position: 'left' },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics',
+          label: 'GitHub',
+          position: 'right',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Book Content',
-          },
-          {
-            href: 'https://github.com/Areeshsheikh/physical_ai_humanoid_robotics',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Content',
-            items: [
-              {
-                label: 'Introduction',
-                to: '/docs/module-1/introduction',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [{ label: 'Tutorial', to: '/docs/intro' }],
+        },
+        {
+          title: 'Community',
+          items: [{ label: 'GitHub', href: 'https://github.com/Areeshsheikh' }],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Areesha Sheikh`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+  },
 };
-
-module.exports = config;
